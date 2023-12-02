@@ -4,10 +4,10 @@ import Image from 'next/image'
 
 export const AuthLayout = ({children}) => {
   return (
-    <main className=' w-full grid lg:grid-cols-2'>
-      <div className="hidden lg:block items-center pt-10 pb-10 bg-zinc-100 ">
+    <main className='h-screen w-full grid lg:grid-cols-2'>
+      <div className="hidden lg:block  items-center pt-10 pb-10 bg-zinc-100 ">
       
-          <section className=" flex justify-center relative items-centerw-[640px]">
+          <section className=" flex justify-center relative items-center w-[640px]">
         <Image 
         src="/banner.jpg"
         width={500}
