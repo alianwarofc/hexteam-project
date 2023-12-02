@@ -2,6 +2,7 @@
 
 import { API_URL } from '@/config/apiUrl'
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 
 export const useRegister = () => {
     const [loading, setLoading] = useState(false)
@@ -18,8 +19,22 @@ export const useRegister = () => {
   }
 
   async function handleSubmitReg(){
-    setLoading(true)
     const {name, email, password} = registerData;
+    let error = "";
+    console.log(name);
+    console.log(email);
+    console.log(password);
+
+    if (!name) error += "Name is required\n";
+    if (!email) error += "Email is required\n";
+    if (!password) error += "Password is required\n";
+
+    if (error) {
+      alert(error);
+      return;
+    }
+    setLoading(true)
+    
     const res = await fetch(`${API_URL}/register`, {
         method: "POST",
         header: {
@@ -30,11 +45,11 @@ export const useRegister = () => {
     
     if(!data){
         setLoading(false)
-        console.log("Something went wrong! Try again")
+        toast.error("Something went wrong! Try again")
         return;
     }
     setLoading(false)
-    console.log(data);
+    toast.success("Register success, please login!")
   }
 
   return {loading, handleChange, handleSubmitReg}
