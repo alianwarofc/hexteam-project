@@ -1,11 +1,9 @@
-"use client"
-
 import { Register } from "@/components/auth/components/Register";
+
+import React from 'react'
 
 export default function Page() {
   return (
-    <div>
-      <Register/>
-      </div>
+    <Register/>
   )
 }
