@@ -1,9 +1,11 @@
 "use client"
 
-import { Button } from "@nextui-org/react";
+import { Register } from "@/components/auth/components/Register";
 
 export default function Page() {
   return (
-    <div><Button color="danger">hey!</Button></div>
+    <div>
+      <Register/>
+      </div>
   )
 }
