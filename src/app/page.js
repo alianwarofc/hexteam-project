@@ -72,7 +72,7 @@ const Dashboard = () => {
         boxShadow='0 4px 6px -1px rgba(0,0,0,0.1)'
         alignItems='center'
         justifyContent='space-between'
-        backgroundColor='white'
+        backgroundColor='#da4b45'
       >
         {/* Logo */}
         <Text fontWeight='bold' fontSize='xl'>
@@ -92,7 +92,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       
-      <Box p='4'>
+      <Box p='4' backgroundColor='#faf7e7'>
         <Text fontSize='xl' fontWeight='bold' mb='4'>
           Create Event
         </Text>
@@ -158,8 +158,8 @@ const Dashboard = () => {
       {/* Implement form inputs and button for creating events */}
 
       {/* Footer */}
-      <Box as='footer' textAlign='center' p='4' marginTop='auto' backgroundColor='white'>
-        <Text fontSize='sm'>Created by HexTeam</Text>
+      <Box as='footer' textAlign='center' p='4' marginTop='auto' backgroundColor='#da4b45'>
+        <Text fontSize='sm' >Created by HexTeam</Text>
       </Box>
     </Flex>
   );
