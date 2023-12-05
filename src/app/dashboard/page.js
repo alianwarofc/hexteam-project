@@ -2,7 +2,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 const useDashboard = require('../../components/hooks/useDashboard');
-import EventList from '../../components/EvenList'; // Assuming you'll create this component
+import EventList from '../../components/EvenList2'; // Assuming you'll create this component
 
 const Dashboard = () => {
   const { getAllEvents, createEvent, joinEvent, events } = useDashboard();
