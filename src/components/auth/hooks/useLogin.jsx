@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { API_URL, LOGIN_URL} from "@/config/apiUrl";
+import { API_URL } from "@/config/apiUrl";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
@@ -13,6 +13,7 @@ export const useLogin = () => {
     email: '',
     password: '',
   });
+  console.log(loginData)
 
   function handleChange(e) {
     const {name, value} = e.target;
@@ -30,8 +31,6 @@ export const useLogin = () => {
       body: JSON.stringify({ email , password})
     })
     const data = await rest.json();
-
-
     Cookies.set('token',data.token)
 
     if (!data) {
